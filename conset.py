@@ -37,17 +37,9 @@ chars = {
     ';' : 'ک',
     "'" : 'گ',
     ' ' : ' ',
+    '.' : '.',
+    '?' : '?',
+    '\n' : '\n',
 }
 
 # ========================= Methods ========================= #
-
-text = "Hf o,F hSj"
-
-if __name__ == "__main__":
-    con = Converter(chars, text)
-
-    # converted_text = con.convert_english_to_persian() ✔
-    converted_text = con.convert_english_to_persian()
-    # converted_text = con.convert_persian_to_english()
-    
-    print(converted_text)
