@@ -5,14 +5,13 @@
 # ========================= Methods ========================= #
 
 class Converter:
-    def __init__(self, chars:dict, text:str):
+    def __init__(self, chars:dict):
         self.chars = chars
-        self.text = text
 
-    def convert_english_to_persian(self): # ✔
+    def to_persian(self, text): # ✔
         conv_text = ""
 
-        for char in self.text:
+        for char in text:
             for key, value in self.chars.items():
                 if char == "H":
                     if char == key:
@@ -25,10 +24,10 @@ class Converter:
 
         return conv_text
     
-    def convert_persian_to_english(self): # ✔
+    def to_english(self, text): # ✔
         conv_text = ""
 
-        for char in self.text:
+        for char in text:
             for key, value in self.chars.items():
                 if char == value:
                     conv_text += key
